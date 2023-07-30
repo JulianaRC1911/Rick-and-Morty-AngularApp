@@ -1,0 +1,45 @@
+<h1>Characters</h1>
+
+
+
+<div class="card-container">
+
+  <mat-form-field class="search-field" appearance="outline">
+    <input #searchInput matInput placeholder="Search" />
+    <button mat-icon-button matSuffix (click)="applyFilter(searchInput.value)">
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let character of pagedCharacters">
+      <a [routerLink]="['/characters', character.id]">
+        <mat-card
+          class="example-card"
+          [ngClass]="getStatusBorderClass(character.status)"
+        >
+          <mat-card-header> </mat-card-header>
+          <img
+            mat-card-image
+            [src]="character.image"
+            alt="{{ character.name }}"
+          />
+          <mat-card-content>
+            <mat-card-title [ngClass]="getStatusClass(character.status)">
+              {{ character.name }}
+            </mat-card-title>
+            <mat-card-subtitle>{{ character.status }}</mat-card-subtitle>
+          </mat-card-content>
+        </mat-card>
+      </a>
+    </div>
+  </div>
+
+  <mat-paginator
+    [length]="characters?.length"
+    [pageIndex]="pageIndex"
+    [pageSize]="pageSize"
+    (page)="onPageChange($event)"
+  >
+  </mat-paginator>
+</div>

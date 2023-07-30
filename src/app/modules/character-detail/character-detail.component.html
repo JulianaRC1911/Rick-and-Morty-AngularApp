@@ -1,0 +1,31 @@
+<h1>Character Details</h1>
+
+<div class="container-fluid" style="padding-bottom: 100px; padding-left: 50px;">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-md-3">
+        <mat-card *ngIf="character" class="example-card" [ngClass]="getStatusBorderClass(character.status)">
+          <mat-card-header> </mat-card-header>
+          <img mat-card-image [src]="character.image" alt="{{ character.name }}" />
+          <mat-card-content>
+            <mat-card-title [ngClass]="getStatusClass(character.status)" style="margin-bottom: 0px;">
+              {{ character.name }}
+            </mat-card-title>
+            <mat-card-subtitle> {{ character.status }}</mat-card-subtitle>
+            <span><strong>Gender:</strong> {{ character.gender }}</span>
+            <br>
+            <span><strong>Location:</strong> {{ character.location.name }}</span>
+            <br>
+            <span><strong>Origin:</strong> {{ character.origin.name }}</span>
+            <br>
+            <span><strong>Species:</strong> {{ character.species }}</span>
+            <br>
+            <span><strong>Creation date:</strong> {{ character.created | date:'dd/MM/yyyy' }}</span>
+            <br>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  
+
+

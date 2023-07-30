@@ -1,0 +1,22 @@
+<h1>Character Details</h1>
+
+<div class="container-fluid" style="padding-bottom: 100px; padding-left: 50px;">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-md-3">
+        <mat-card *ngIf="episode" class="example-card" >
+          <mat-card-header> </mat-card-header>
+          <img mat-card-image [src]="getImageUrl(episode.name)" alt="{{ episode.name }}" />
+          <mat-card-content>
+            <mat-card-title  >
+              {{ episode.name }}
+            </mat-card-title>
+            <span><strong>Air date:</strong> {{ episode.air_date }}</span>
+            <br>
+            <span><strong>N° episode:</strong> {{ episode.episode }}</span>
+            <br>
+            <br>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,17 @@
+<div class="menu-container">
+    <mat-toolbar #toolbar>
+        <span>Rick and Morty</span>
+        <span class="spacer"></span>
+        <button id="menuButton" mat-icon-button class="example-icon" aria-label="Menu icon-button with menu icon" *ngIf="!checkMenuFit()" (click)="toggleMenu()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <a href="/characters">Characters</a>
+        <a href="/episodes">Episodes</a>
+        <a href="/locations">Locations</a>
+    </mat-toolbar>
+    <div class="menu-items" id="menuItems" *ngIf="showMenu || !checkMenuFit()">
+        <a href="/characters">Characters</a>
+        <a href="/episodes">Episodes</a>
+        <a href="/locations">Locations</a>
+    </div>
+</div>

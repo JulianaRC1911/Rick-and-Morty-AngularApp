@@ -1,0 +1,58 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+
+mat-toolbar {
+    background: #c0c6c9;
+}
+
+span {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-size: 25px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.icon {
+    color: #fff;
+}
+
+mat-toolbar a {
+    text-decoration: none; 
+    font-family: 'Lato';
+    font-style: normal;
+    font-size: 20px;
+    line-height: 21px;
+    color: #000000;
+    margin-right: 15px; 
+}
+
+mat-toolbar a:active,
+mat-toolbar a:focus,
+mat-toolbar a:hover {
+    text-decoration: underline; 
+}
+
+
+#menuButton {
+    display: none;
+}
+
+.menu-items {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    mat-toolbar a {
+        display: none;
+    }
+
+    .menu-items {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+

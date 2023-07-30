@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Rubik";
+    src: url("src/assets/font/Rubik/Rubik-VariableFont_wght.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Lato";
+    src: url("src/assets/font/Lato/Lato-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "LatoItalic";
+    src: url("src/assets/font/Lato/Lato-Italic.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
